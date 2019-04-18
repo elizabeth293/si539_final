@@ -37,7 +37,7 @@ html {
 }
 
 header {
-	/* border-bottom: 5px solid #ffbcc9; */
+	border-bottom: 5px solid #ffbcc9;
 	padding-bottom: 20px;
 	display: flex;
 	flex-direction: column;
@@ -187,17 +187,12 @@ a:hover {
 	color: #b10f44;
 }
 
-.current {
-  text-transform: uppercase;
-	color: #b10f44;
-}
-
 .category {
 	font-weight: bold;
 }
 
 .nav .btn {
-	border: 5px solid #ffbcc9;
+	/* border: 5px solid #ffbcc9; */
 	background-color: white;
 	width: 75%;
   padding: 10px;
@@ -205,6 +200,15 @@ a:hover {
   display: inline-block;
   margin: 0;
 	font-size: 30px;
+}
+
+.current {
+  text-transform: uppercase;
+	color: #b10f44;
+}
+
+.btn:active {
+	background-color: #ffbcc9;
 }
 
 i {
@@ -229,7 +233,7 @@ i {
 		margin: 10px;
 	}
 	.nav .btn {
-		border: 5px solid #ffbcc9;
+		/* border: 5px solid #ffbcc9; */
 		background-color: white;
 		width: auto;
 	  padding: 10px;
@@ -306,7 +310,7 @@ i {
 	 align-self: end;
  }
 	.nav .btn {
-		border: 5px solid #ffbcc9;
+		/* border: 5px solid #ffbcc9; */
 		background-color: white;
 		width: auto;
 	  padding: 10px;
@@ -314,6 +318,10 @@ i {
 	  display: inline-block;
 	  margin: 0;
 		font-size: 20px;
+	}
+	.btn:hover {
+		background-color: #ffbcc9;
+		color: white;
 	}
 	.parallax {
 		background-image: url("../images/flowers2.jpg");
