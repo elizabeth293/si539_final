@@ -55,7 +55,6 @@ header img {
 	width: 40vw;
 	margin: 10px;
 }
-
 .description {
 	padding: 30px auto;
 	display: flex;
@@ -307,6 +306,7 @@ i {
 		width: 100%;
 	}
  .nav {
+	 padding-top: 20px;
 	 align-self: end;
  }
 	.nav .btn {
@@ -319,7 +319,7 @@ i {
 	  margin: 0;
 		font-size: 20px;
 	}
-	.btn:hover {
+	.nav .btn:hover {
 		background-color: #ffbcc9;
 		color: white;
 	}
