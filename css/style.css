@@ -1,0 +1,372 @@
+
+* {
+	text-align: center;
+	box-sizing: border-box;
+}
+
+/* I got assistance with this from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ */
+a.skip-to-content {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+
+a.skip-to-content:focus, a.skip-to-content:active {
+    color: #000000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+
+html {
+	background: #FFFFFF;
+	background-repeat: no-repeat;
+	font-family: 'Lato', sans-serif;
+}
+
+header {
+	/* border-bottom: 5px solid #ffbcc9; */
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+h1 {
+	font-family: 'Rochester', sans-serif;
+	font-size: 15vw;
+	margin: 10px;
+}
+
+header img {
+	width: 40vw;
+	margin: 10px;
+}
+
+.description {
+	padding: 30px auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: flex-start;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	font-size: 18px;
+}
+
+.description p {
+	margin: 10px;
+	text-align: left;
+}
+
+.sticky + .description {
+	padding-top: 60px;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: space-between;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+	background-color: red;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid black;
+	width: 80%;
+}
+
+.close {
+	color: blue;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.item {
+	box-sizing: border-box;
+	width: 100vw;
+	margin: 20px;
+	font-size: 18px;
+	border: 5px solid #ffbcc9;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.item ul {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.item li {
+	text-align: left;
+}
+
+.item a {
+	color: #b10f44;
+}
+
+.item img {
+	width: 100%;
+	border-radius: 15px;
+}
+
+.nav li {
+  margin: 20px;
+  vertical-align: top;
+}
+
+.smallnav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.smallnav li {
+  margin: 10px;
+  vertical-align: bottom;
+}
+
+main {
+	margin-top: 50px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	margin: 200px;
+	font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: #b10f44;
+}
+
+.current {
+  text-transform: uppercase;
+	color: #b10f44;
+}
+
+.category {
+	font-weight: bold;
+}
+
+.nav .btn {
+	border: 5px solid #ffbcc9;
+	background-color: white;
+	width: 75%;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0;
+	font-size: 30px;
+}
+
+i {
+	font-size: .75em;
+}
+
+/* For Tablets */
+@media screen and (min-width: 700px) {
+	h1 {
+		font-size: 5vw;
+	}
+	header img {
+		width: 25vw;
+	}
+	.nav ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	.nav li {
+		margin: 10px;
+	}
+	.nav .btn {
+		border: 5px solid #ffbcc9;
+		background-color: white;
+		width: auto;
+	  padding: 10px;
+	  border-radius: 10px;
+	  display: inline-block;
+	  margin: 0;
+		font-size: 30px;
+	}
+	.description p {
+		font-size: 20px;
+	}
+	.container {
+		display: grid;
+	}
+	.item {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-column-gap: 15px;
+		font-size: 100%;
+		border: none;
+		border-bottom: 5px solid #ffbcc9;
+		border-radius: 0px;
+		padding-bottom: 30px;
+ }
+ .item ul {
+	 place-self: center;
+ }
+
+ .footer {
+	 font-size: 10px;
+}
+
+/* For Desktop */
+@media screen and (min-width: 1200px) {
+	body, html {
+		height: 100%;
+	}
+	header {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	header a {
+		display: grid;
+		grid-template-columns: 15% 85%;
+	}
+	header img {
+		width: 100px;
+		grid-column-start: 1;
+		grid-column-end: 1;
+		align-self: end;
+	}
+	header h1 {
+		font-size: 40px;
+		grid-column-start: 2;
+		grid-column-end: 2;
+		margin-left: 10px;
+		align-self: end;
+	}
+	#navbar {
+		overflow: hidden;
+		background-color: white;
+	}
+	.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+ .nav {
+	 align-self: end;
+ }
+	.nav .btn {
+		border: 5px solid #ffbcc9;
+		background-color: white;
+		width: auto;
+	  padding: 10px;
+	  border-radius: 10px;
+	  display: inline-block;
+	  margin: 0;
+		font-size: 20px;
+	}
+	.parallax {
+		background-image: url("../images/flowers2.jpg");
+		height: 70%;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.description {
+		font-size: 20px;
+		padding: 16px;
+	}
+	.sticky + .description {
+		padding-top: 60px;
+	}
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		align-content: space-between;
+		justify-content: center;
+		margin-top: 50px;
+	}
+	/* .expand {
+		background-color: red;
+		color: black;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		text-align: left;
+		border: none;
+		outline: none;
+		font-size: 20px;
+		transition: .4s;
+	}
+	.active, .expand:hover {
+		background-color: blue;
+	}
+	.paragraph {
+		padding: 0 18px;
+		background-color: white;
+		display: none;
+		overflow: hidden;
+	} */
+	.item {
+		display: flex;
+		flex-direction: column;
+		width: 200px;
+		border: none;
+	}
+	.item img {
+		margin-bottom: 15px;
+	}
+}
