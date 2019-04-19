@@ -47,7 +47,7 @@ header {
 
 h1 {
 	font-family: 'Rochester', sans-serif;
-	font-size: 50px;
+	font-size: 40px;
 	margin: 10px;
 }
 
@@ -299,12 +299,12 @@ a:hover {
 .nav .btn {
 	border: 5px solid #ffbcc9;
 	background-color: white;
-	width: 80%;
+	width: 200px;
   padding: 10px;
   border-radius: 10px;
   display: inline-block;
-  margin: 0;
 	font-size: 20px;
+	margin: -5px;
 }
 
 .current {
