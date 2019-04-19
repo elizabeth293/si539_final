@@ -183,8 +183,12 @@ header img {
 	margin-bottom: 10px;
 }
 
-.active, .expand:hover {
+.expand:hover {
 	color: #ffbcc9;
+}
+
+.active {
+	color: #b10f44;
 }
 
 .paragraph {
