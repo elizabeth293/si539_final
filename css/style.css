@@ -47,7 +47,7 @@ header {
 
 h1 {
 	font-family: 'Rochester', sans-serif;
-	font-size: 15vw;
+	font-size: 50px;
 	margin: 10px;
 }
 
@@ -139,6 +139,15 @@ header img {
 	padding: 20px;
 	border: none;
 	width: 50%;
+}
+
+#myModal ul {
+	display: flex;
+	flex-direction: column;
+}
+
+#myModal li {
+	margin: 5px;
 }
 
 .close {
@@ -295,7 +304,7 @@ a:hover {
   border-radius: 10px;
   display: inline-block;
   margin: 0;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .current {
