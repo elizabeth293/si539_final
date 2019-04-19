@@ -259,7 +259,7 @@ footer button:active {
 	color: white;
 }
 
-main button {
+#myButton {
 	border: 5px solid #ffbcc9;
 	background-color: white;
 	width: 150px;
@@ -272,11 +272,11 @@ main button {
 	font-family: 'Lato', sans-serif;
 }
 
-main button:hover {
+#myButton:hover {
 	color: #b10f44;
 }
 
-main button:active {
+#myButton:active {
 	background-color: #ffbcc9;
 	color: white;
 }
@@ -450,7 +450,7 @@ i {
 		background-color: #ffbcc9;
 		color: white;
 	}
-	main button {
+	#myButton {
 		border: none;
 		background-color: white;
 		color: #ffbcc9;
@@ -461,11 +461,11 @@ i {
 		font-size: 18px;
 		cursor: pointer;
 	}
-	main button:hover {
+	#myButton:hover {
 		background-color: #ffbcc9;
 		color: white;
 	}
-	main button:active {
+	#myButton:active {
 		background-color: #ffbcc9;
 		color: white;
 	}
