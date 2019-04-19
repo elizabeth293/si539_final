@@ -158,6 +158,7 @@ header img {
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
+	transition: .4s;
 }
 
 .close:hover, .close:focus {
@@ -190,7 +191,7 @@ header img {
 	background-color: white;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+	transition: max-height 0.5s ease;
 }
 
 .item {
@@ -217,6 +218,7 @@ header img {
 
 .item a {
 	color: #b10f44;
+	transition: .4s;
 }
 
 .item img {
@@ -264,32 +266,17 @@ footer button {
 	cursor: pointer;
 	font-family: 'Lato', sans-serif;
 	color: #b10f44;
+	transition: .4s;
 }
 
 footer button:hover {
 	color: #ffbcc9;
 }
 
-#myButton {
-	border: none;
-	background-color: white;
-	width: 150px;
-  padding: 5px;
-  display: inline-block;
-  margin-bottom: 10px;
-	font-size: 18px;
-	cursor: pointer;
-	font-family: 'Lato', sans-serif;
-	color: #b10f44;
-}
-
-#myButton:hover {
-	color: #ffbcc9;
-}
-
 a {
   text-decoration: none;
 	color: black;
+	transition: .4s;
 }
 
 a:hover {
@@ -384,7 +371,7 @@ i {
 		box-shadow: none;
  }
  .item ul {
-	 place-self: center;
+	 align-self: center;
  }
  .footer {
 	 font-size: 10px;
