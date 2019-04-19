@@ -34,11 +34,13 @@
 
     <section class = "description">
 
-      <p> These are some of my favorite wedding dresses. </p>
-      <p> I love a-lines dresses! The flowy skirts create an ethereal, romantic vibe that really appeals to me. I do also like a few fit-and-flares, but only if the flare is subtle and the lines are smooth. </p>
-      <p> I am a big fan of delicate lace details! I can't see myself wearing anything with much sparkle. </p>
-      <p> As for the sleeves and neckline, I'm very indecisive. These details will likely have to wait until I actually try on the dresses to see what looks best! </p>
-
+      <button class = "expand"> My Favorite Wedding Dresses </button>
+      <div class = "paragraph">
+        <p> I love a-lines dresses! The flowy skirts create an ethereal, romantic vibe that really appeals to me. I do also like a few fit-and-flares, but only if the flare is subtle and the lines are smooth. </p>
+        <p> I am a big fan of delicate lace details! I can't see myself wearing anything with much sparkle. </p>
+        <p> As for the sleeves and neckline, I'm very indecisive. These details will likely have to wait until I actually try on the dresses to see what looks best! </p>
+      </div>
+      
     </section>
 
     <section class = "container">
@@ -223,6 +225,22 @@
       }
       span.onclick = function() {
         modal.style.display = "none";
+      }
+    </script>
+
+    <script>
+      var exp = document.getElementsByClassName("expand");
+      var i;
+      for (i = 0; i < exp.length; i++) {
+        exp[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var paragraph = this.nextElementSibling;
+          if (paragraph.style.maxHeight) {
+            paragraph.style.maxHeight = null;
+          } else {
+            paragraph.style.maxHeight = paragraph.scrollHeight + "px";
+          }
+        });
       }
     </script>
 

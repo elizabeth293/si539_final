@@ -36,12 +36,14 @@
 
     <section class = "description">
 
-      <p> These are some of my favorite engagement rings. </p>
-      <p> As you can see, I love rose gold! This is the most flattering metal on me, so I'm pretty set on that detail. </p>
-      <p> I found out about Moissanite recently, and I'm convinced that this diamond alternative is for me! The stone is very close to the hardness and brilliance of a diamond, but at a fraction of the price. Most people can't tell the difference! </p>
-      <p> As for the cut of the stone, I'm less sure. I love princess cut stones, but I am also drawn to oval, radiant, cushion, and classic round cuts. </p>
-      <p> I used to think I wanted a halo ring, but after trying some on, I realized they didn't fit my hand as well as I'd imagined. I love the simplicity of the rings on this page, and I am leaning towards either a solitaire setting or a few side stones. </p>
-
+      <button class = "expand"> My Favorite Engagement Rings </button>
+      <div class = "paragraph">
+        <p> As you can see, I love rose gold! This is the most flattering metal on me, so I'm pretty set on that detail. </p>
+        <p> I found out about Moissanite recently, and I'm convinced that this diamond alternative is for me! The stone is very close to the hardness and brilliance of a diamond, but at a fraction of the price. Most people can't tell the difference! </p>
+        <p> As for the cut of the stone, I'm less sure. I love princess cut stones, but I am also drawn to oval, radiant, cushion, and classic round cuts. </p>
+        <p> I used to think I wanted a halo ring, but after trying some on, I realized they didn't fit my hand as well as I'd imagined. I love the simplicity of the rings on this page, and I am leaning towards either a solitaire setting or a few side stones. </p>
+      </div>
+      
     </section>
 
     <section class = "container">
@@ -182,21 +184,21 @@
     }
   </script>
 
-  <!-- <script>
+  <script>
     var exp = document.getElementsByClassName("expand");
     var i;
     for (i = 0; i < exp.length; i++) {
       exp[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var paragraph = this.nextElementSibling;
-        if (paragraph.style.display == "block") {
-          paragraph.style.display = "none";
+        if (paragraph.style.maxHeight) {
+          paragraph.style.maxHeight = null;
         } else {
-          paragraph.style.display = "block";
+          paragraph.style.maxHeight = paragraph.scrollHeight + "px";
         }
       });
     }
-  </script> -->
+  </script>
 
   <script>
     var i = 0;

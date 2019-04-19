@@ -34,11 +34,13 @@
 
     <section class = "description">
 
-      <p> These are some of my favorite wedding venues. </p>
-      <p> I'm originally from New Mexico, and I'm very attached to the state. I found some beautiful venues there that incorporate a lot of the elements I love about the desert. </p>
-      <p> Other locations I'm interested in include: Ann Arbor (my current home), Washington (I love all the trees!), and Austin (where I grew up). </p>
-      <p> The venues I like the most are outdoor or old historical buildings. Both of these settings are already so beautiful, I'm hoping that the decor could be kept to a minimum to save costs! </p>
-      <p> All of the following information is from WeddingWire.com. </p>
+      <button class = "expand"> My Favorite Venues </button>
+      <div class = "paragraph">
+        <p> I'm originally from New Mexico, and I'm very attached to the state. I found some beautiful venues there that incorporate a lot of the elements I love about the desert. </p>
+        <p> Other locations I'm interested in include: Ann Arbor (my current home), Washington (I love all the trees!), and Austin (where I grew up). </p>
+        <p> The venues I like the most are outdoor or old historical buildings. Both of these settings are already so beautiful, I'm hoping that the decor could be kept to a minimum to save costs! </p>
+        <p> All of the following information is from WeddingWire.com. </p>
+      </div>
 
     </section>
 
@@ -195,6 +197,22 @@
       }
       span.onclick = function() {
         modal.style.display = "none";
+      }
+    </script>
+
+    <script>
+      var exp = document.getElementsByClassName("expand");
+      var i;
+      for (i = 0; i < exp.length; i++) {
+        exp[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var paragraph = this.nextElementSibling;
+          if (paragraph.style.maxHeight) {
+            paragraph.style.maxHeight = null;
+          } else {
+            paragraph.style.maxHeight = paragraph.scrollHeight + "px";
+          }
+        });
       }
     </script>
 

@@ -36,9 +36,17 @@
 
     <section class = "description">
 
-      <p> Welcome to my site! Here I've collected all of my favorite engagement rings, wedding dresses, and wedding venues in the form of an inspirational idea board. </p>
+        <p> Welcome to my site! Here I've collected all of my favorite engagement rings, wedding dresses, and wedding venues in the form of an inspirational idea board. </p>
 
     </section>
+
+    <div class = "callout">
+      <div class = "callout-header"> About This Website </div>
+      <span class = "close-button" onclick = "this.parentElement.style.display='none';"> &times; </span>
+      <div class = "callout-content">
+        <p> This site was created for SI 539: Design of Complex Websites </p>
+      </div>
+    </div>
 
     </main>
 
@@ -65,6 +73,22 @@
         } else {
           navbar.classList.remove("sticky");
         }
+      }
+    </script>
+
+    <script>
+      var exp = document.getElementsByClassName("expand");
+      var i;
+      for (i = 0; i < exp.length; i++) {
+        exp[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var paragraph = this.nextElementSibling;
+          if (paragraph.style.display == "block") {
+            paragraph.style.display = "none";
+          } else {
+            paragraph.style.display = "block";
+          }
+        });
       }
     </script>
 
